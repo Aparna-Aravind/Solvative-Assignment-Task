@@ -24,12 +24,12 @@ function startPause() {
         minutes = 0;
         hours = 0;
         updateDisplay();
-        timer = setInterval(updateDisplay, 500);
+        timer = setInterval(updateDisplay, 1000);
         document.getElementById("startPause").textContent = "Start";
     }
     // Logic for Start Control Button
     else {
-        timer = setInterval(updateDisplay, 500);
+        timer = setInterval(updateDisplay, 1000);
         document.getElementById("startPause").textContent = "Pause";
 
     }
