@@ -25,7 +25,8 @@ function startPause() {
         hours = 0;
         updateDisplay();
         timer = setInterval(updateDisplay, 1000);
-        document.getElementById("startPause").textContent = "Start";
+        document.getElementById("startPause").textContent = "Pause";
+        clearTimer = false;
     }
     // Logic for Start Control Button
     else {
