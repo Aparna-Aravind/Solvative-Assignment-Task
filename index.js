@@ -65,6 +65,7 @@ function updateDisplay() {
             hours++;
         }
     }
+    // Display Updated Timer on Screen
     let displayString = `${calcTime(hours)}:${calcTime(minutes)}:${calcTime(seconds)}`;
     document.getElementById("displayTime").textContent = displayString;
 }

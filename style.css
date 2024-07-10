@@ -2,22 +2,27 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgb(147, 177, 147);
 }
+
+.timerTitle {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 3px 3px black;
+}
+
 
 .stopwatch-container {
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(147, 177, 147);
-}
-
-.stopwatch-container h1 {
-    font-size: 50px;
-    color: white;
-    font-weight: 600;
+    /* background-color: rgb(147, 177, 147); */
 }
 
 .stopwatch-time {
@@ -42,6 +47,7 @@ body {
     box-shadow: 1px 2px 6px #040404
 }
 
+/* Styles for Button Action Visibility */
 .controlButton:hover {
     color: White;
     background-color: rgb(21, 39, 21);
@@ -50,7 +56,7 @@ body {
 
 .controlButton:focus {
     color: white;
-    background-color:  rgb(31, 41, 31);
+    background-color: rgb(46, 46, 46);
 }
 
 /* Media Query for Small Screens */
@@ -68,5 +74,17 @@ body {
 
     #displayTime {
         font-size: 80px;
+    }
+}
+@media(min-width:1500px) {
+    .controlButton {
+        width: 240px;
+        font-size: 27px;
+    }
+    #displayTime {
+        font-size: 10px;
+    }
+    .timerTitle {
+        font-size: 40px;
     }
 }
