@@ -16,6 +16,7 @@ function startPause() {
     // Logic for Pause Control Button
     if (isRunning) {
         clearInterval(timer);
+        document.getElementById("startPause").textContent = "Resume";
     }
     // Logic for Resetting Values after Stop Button is clicked 
     else if (clearTimer && !isRunning) {
@@ -24,10 +25,13 @@ function startPause() {
         hours = 0;
         updateDisplay();
         timer = setInterval(updateDisplay, 500);
+        document.getElementById("startPause").textContent = "Start";
     }
     // Logic for Start Control Button
     else {
         timer = setInterval(updateDisplay, 500);
+        document.getElementById("startPause").textContent = "Pause";
+
     }
     isRunning = !isRunning;
 }
@@ -36,7 +40,7 @@ function stop() {
     clearInterval(timer);
     isRunning = false;
     clearTimer = true;
-    console.log(clearTimer);
+    document.getElementById("startPause").textContent = "Start";
 }
 
 function reset() {
@@ -46,6 +50,8 @@ function reset() {
     minutes = 0;
     hours = 0;
     updateDisplay();
+    document.getElementById("startPause").textContent = "Start";
+
 }
 
 // Update Timer Display
